@@ -13,6 +13,8 @@ import com.pm.patientservice.dto.PatientRequestDTO;
 import com.pm.patientservice.dto.PatientResponseDTO;
 import com.pm.patientservice.service.PatientService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("patients")
 public class PatientController {
@@ -29,7 +31,7 @@ public class PatientController {
     }
 
     @PostMapping
-    public ResponseEntity<PatientResponseDTO> createPatient(@RequestBody PatientRequestDTO dto){
+    public ResponseEntity<PatientResponseDTO> createPatient(@Valid @RequestBody PatientRequestDTO dto){
         return ResponseEntity.ok().body(patientService.createPatient(dto));
     }
 }
