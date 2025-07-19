@@ -2,7 +2,8 @@ package com.pm.patientservice.dto;
 
 import java.time.LocalDate;
 
-public record PatientResponseDTO(String id,
+public record PatientResponseDTO(
+     String id,
 
      String name,
 
