@@ -19,6 +19,9 @@ public class Patient {
   private UUID id;
 
   @NotNull
+  private String name;
+
+  @NotNull
   @Email
   @Column(unique = true)
   private String email;
