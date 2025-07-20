@@ -19,7 +19,7 @@ public record PatientRequestDTO(
     @NotBlank(message = "Date of birth is required")
     String dateOfBirth,
 
-    @NotBlank(message = "Date of birth is required")
+    @NotBlank(message = "Registered Date is required")
     String registeredDate
     ) {
     
